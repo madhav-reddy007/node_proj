@@ -13,9 +13,9 @@ const userRouter = require("./routes/userRoutes")
 const errorHandler = require("./middleware/errorhandler")
 const connectDb = require("./config/dbConnection")
 connectDb();
-// app.get('/', (req, res) => {
-//   res.send('Hello World!');
-// });
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 // app.get('/api', (req, res) => {
 //   res.send('Hello World!');
 // });
