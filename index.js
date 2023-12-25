@@ -48,6 +48,11 @@ connectDb();
 app.use('/api/contacts',contactRouter);
 app.use('/api/user',userRouter);
 app.use(errorHandler);
+var http = require('http');
+http.createServer(function (req,res){
+  res.write('a monk');
+  res.end();
+}).listen(80)
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
