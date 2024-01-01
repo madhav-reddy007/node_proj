@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 const upload = multer({ dest: "./public/uploads" });
 const contactRouter = require('./routes/contactRoutes');
 const userRouter = require("./routes/userRoutes")
+const campaignRouter = require("./routes/campaignRoutes")
 const errorHandler = require("./middleware/errorhandler")
 const connectDb = require("./config/dbConnection")
 connectDb();
@@ -48,6 +49,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/contacts',contactRouter);
 app.use('/api/user',userRouter);
+app.use('/api/campaign',campaignRouter);
 app.use(errorHandler);
 var http = require('http');
 // http.createServer(function (req,res){
